@@ -1,0 +1,51 @@
+/* clients */
+
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--project-list-gap));
+  margin-left: calc(-1 * var(--project-list-gap));
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.clients__item {
+  flex-basis: calc(100% / 2 - var(--project-list-gap));
+  margin-top: var(--project-list-gap);
+  margin-left: var(--project-list-gap);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - var(--project-list-gap));
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 150px) / 6);
+  }
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  color: var(--icon-color);
+
+  transition: color var(--duration) var(--timing-function),
+    border var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--blue-background);
+    border-color: var(--blue-background);
+  }
+}
+
+.clients__icon {
+  fill: currentColor;
+}
